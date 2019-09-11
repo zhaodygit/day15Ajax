@@ -8,17 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DemoServlet01
+ * Servlet implementation class DemoServlet02
  */
-@WebServlet("/DemoServlet01")
-public class DemoServlet01 extends HttpServlet {
+@WebServlet("/DemoServlet02")
+public class DemoServlet02 extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		response.setContentType("text/html;charset=utf-8");
-		String name = request.getParameter("name");
-		String age = request.getParameter("age");
-		System.out.println("收到了请求.."+ name + "="+ age);
 		response.getWriter().write("收到了请求..");
 	}
 
@@ -26,8 +22,7 @@ public class DemoServlet01 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		System.out.println("现在来了一个post请求.");
+		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
